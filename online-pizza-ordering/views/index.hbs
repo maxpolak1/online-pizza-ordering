@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Menu</title>
+      
+      <!-- font awesome cdn link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      
+      <!-- custom css file link  -->
+      <link rel="stylesheet" href="stylesheets/style.css">
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="javascripts/dom.js"></script>
+    </head> 
+    
+    <body>
+      <h1>Menu</h1>
+      <header class="header">
+        <section class="flex">
+          <a href="#home" class="logo">PIZZA</a>
+          <nav class="navbar">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#menu">MENU</a>
+            <a href="#order">ORDER</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+          
+          <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="order-btn" class="fas fa-box"></div>
+            <a href="/cart-summary">
+              <div id="cart-btn" class="fas fa-shopping-cart"></div>
+              <div id="cartsize" class="fas">{{cartCount}}</div>
+            </a>
+          </div><span></span>
+        </section>
+      </header>
+      
+      <br><br><br>
+      
+      <div class="container">
+        <br><br>
+        <p>Welcome to the authenticated page {{ user.username }}!</p>
+        <h1>Menu</h1>
+        <a href="/topping/create"><button>Create New Topping</button></a>
+        <br> <br>
+        
+        <!-- Display product table -->
+        <table class="table table-striped table-hover table-bordered">
+          <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Add</th>
+          </tr>
+          
+          {{#each products}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{description}}</td>
+              <td>{{category}}</td>
+              <td><input type="number" min="1" value="1" class="quantityInput" data-productid="{{id}}"></td>
+              <td><button data-productid="{{id}}" onclick="addToCart(event)">Add to Cart</button></td>
+            </tr>
+          {{/each}}
+        </table>
+
+        <br>
+
+        <h1>Create A Custom Pizza</h1>
+        
+        <!-- Your HTML dropdowns and button -->
+        <label for="customPizzaNameSelect">Select Pizza Name:</label>
+        <select id="customPizzaNameSelect" name="pizzaId">
+          <!-- Pizza names with data-id attribute to store the pizza id -->
+          {{#each products}}
+            <option value="{{this.id}}" data-id="{{this.id}}">{{this.name}}</option>
+          {{/each}}
+        </select>
+
+        <br>
+
+        <label for="customizationsSelect">Select Customizations:</label>
+        <select id="customizationsSelect" name="customizationId">
+          {{#each customizations}}
+            <option value="{{this.customid}}" data-id="{{this.customid}}">{{name}}</option>
+          {{/each}}
+      </select>
+
+
+        <br>
+
+        <label for="quantityIn">Quantity:</label>
+        <input type="number" id="quantityIn" name="quantity" min="1" value="1">
+
+        <br>
+
+        <button onclick="addToCartBtn(event)">Add to Cart</button>
+
+
+        <br><br><br>
+
+        <a href="/users/logout"><button>Logout</button></a>
+        <a href="/users/change-password"><button>Change Password</button></a>
+      </div>
+      <br><br><br>
+    </body>
+  </html>

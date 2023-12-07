@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Complete Responsive Pizza Shop Website Design</title>
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+
+    <body> 
+        <!-- header section starts  -->
+        <header class="header">
+            <section class="flex">
+                <a href="#home" class="logo">PIZZA</a>
+                <nav class="navbar">
+                    <a href="#home">HOME</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#menu">MENU</a>
+                    <a href="#order">ORDER</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+
+                <div class="icons">
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                    <a href="/login"><div id="user-btn" class="fas fa-user"></div></a>
+                    <div id="order-btn" class="fas fa-box"></div>
+                    <div id="cart-btn" class="fas fa-shopping-cart"><span></span></div>
+                </div>
+            </section>
+        </header>
+
+        <div class="my-orders">
+            <section>
+                <div id="close-orders"><span>close</span></div>
+                <h3 class="title"> my orders </h3>
+                <div class="box">
+                    <p>placed on : <span>06/04/2022</span> </p>
+                    <p>name : <span>shaikh anas</span> </p>
+                    <p>number : <span>1234567890</span></p>
+                    <p>address : <span>flat no. 123, bulding no. 2, jogeshwari, mumbai, india - 400104</span></p>
+                    <p>payment method : <span>cash on delivery</span></p>
+                    <p>your orders : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+                    <p>total price : <span>$11/-</span></p>
+                    <p>payment status : <span style="color: var(--red);">pending</span> </p>
+                </div>
+
+                <div class="box">
+                    <p>placed on : <span>06/04/2022</span> </p>
+                    <p>name : <span>shaikh anas</span> </p>
+                    <p>number : <span>1234567890</span></p>
+                    <p>address : <span>flat no. 123, bulding no. 2, jogeshwari, mumbai, india - 400104</span></p>
+                    <p>payment method : <span>cash on delivery</span></p>
+                    <p>your orders : <span>pizza 01 $3/- x 2, pizza 03 $2/- x 1, pizza 06 $4/- x 4, pizza 07, $2/- x 1</span></p>
+                    <p>total price : <span>$11/-</span></p>
+                    <p>payment status : <span style="color: var(--red);">pending</span> </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="shopping-cart">
+            <section>
+                <div id="close-cart"><span>close</span></div>
+                <div class="box">
+                    <a href="#" class="fas fa-times"></a>
+                    <img src="public/images/pizza-1.jpg" alt="">
+                    <div class="content">
+                    <p>pizza-1 <span>( $3/- x 2 )</span></p>
+                    <form action="" method="post">
+                        <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                        <button type="submit" class="fas fa-edit" name="update_qty"></button>
+                    </form>
+                </div>
+
+                <div class="box">
+                    <a href="#" class="fas fa-times"></a>
+                    <img src="images/pizza-3.jpg" alt="">
+                    <div class="content">
+                    <p>pizza-3 <span>( $2/- x 1 )</span></p>
+                    <form action="" method="post">
+                        <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+                        <button type="submit" class="fas fa-edit" name="update_qty"></button>
+                    </form>
+                </div>
+
+                <div class="box">
+                    <a href="#" class="fas fa-times"></a>
+                    <img src="images/pizza-6.jpg" alt="">
+                    <div class="content">
+                        <p>pizza-6 <span>( $4/- x 2 )</span></p>
+                        <form action="" method="post">
+                            <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+                            <button type="submit" class="fas fa-edit" name="update_qty"></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <a href="#" class="fas fa-times"></a>
+                    <img src="images/pizza-7.jpg" alt="">
+                    <div class="content">
+                        <p>pizza-7 <span>( $2/- x 1 )</span></p>
+                        <form action="" method="post">
+                            <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+                            <button type="submit" class="fas fa-edit" name="update_qty"></button>
+                        </form>
+                    </div>
+                </div>
+                <a href="#order" class="btn">ORDER NOW</a>
+            </section>
+        </div>
+
+        <div class="home-bg">
+            <section class="home" id="home">
+                <div class="slide-container">
+                    <div class="slide active">
+                        <div class="image">
+                            <img src="images/home-img-1.png" alt="">
+                        </div>
+            
+                        <div class="content">
+                            <h3>homemade Pepperoni Pizza</h3>
+                            <div class="fas fa-angle-left" onclick="prev()"></div>
+                            <div class="fas fa-angle-right" onclick="next()"></div>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="image">
+                            <img src="images/home-img-2.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>Pizza With Mushrooms</h3>
+                            <div class="fas fa-angle-left" onclick="prev()"></div>
+                        <div class="fas fa-angle-right" onclick="next()"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- about section starts  -->
+        <section class="about" id="about">
+            <h1 class="heading">about us</h1>
+            <div class="box-container">
+                <div class="box">
+                    <img src="images/about-1.svg" alt="">
+                    <h3>MADE WITH LOVE</h3>
+                    <p>
+                        At PizzaJoy, we don't just make pizzas; we curate moments. 
+                        Every pizza is a canvas, and our chefs are the artists, infusing each creation with a generous dose of love. 
+                        From the finest ingredients to the artful assembly, we pour our hearts into every step of the process. 
+                        Our commitment to quality is not just about the taste; it's about creating a culinary masterpiece that ignites joy and brings people together.
+                    </p>
+                    <a href="#menu" class="btn">our menu</a>
+                </div>
+
+                <div class="box">
+                    <img src="images/about-2.svg" alt="">
+                    <h3>30 MINUTES DELIVERY</h3>
+                    <p>
+                        We know that when hunger strikes, waiting is not an option. That's why we take pride in our lightning-fast delivery service. 
+                        When you order from PizzaJoy, you can expect your hot and freshly-made pizza at your doorstep within 30 minutes. 
+                        Our commitment to speedy delivery is a promise – because we understand that good times should never be put on hold.
+                    </p>
+                    <a href="#menu" class="btn">our menu</a>
+                </div>
+
+                <div class="box">
+                    <img src="images/about-3.svg" alt="">
+                    <h3>SHARE WITH FRIENDS</h3>
+                    <p>
+                        Pizza is more than a meal; it's a social glue that binds friends and family. 
+                        We understand the joy that comes from sharing a delicious pizza with your loved ones. 
+                        That's why we've designed our menu to cater to diverse tastes, ensuring there's something for everyone at the table. 
+                        So, whether you're planning a cozy night in with friends or a family feast, let PizzaJoy be the centerpiece of your shared moments.
+                    </p>
+                    <a href="#menu" class="btn">our menu</a>
+                </div>
+            </div>
+        </section>
+        <!-- about section ends -->
+
+        <!-- menu section starts  -->
+        <section id="menu" class="menu">
+            <h1 class="heading">our menu</h1>
+            <div class="box-container">
+                <div class="box">
+                    <div class="price">$<span>2</span>/-</div>
+                    <img src="images/pizza-1.jpg" alt="">
+                    <div class="name">pizza 1</div>
+                    <form action="" method="post">
+                        <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                    </form>
+                </div>
+
+                <div class="box">
+                    <div class="price">$<span>4</span>/-</div>
+                    <img src="images/pizza-2.jpg" alt="">
+                    <div class="name">pizza 2</div>
+                    <form action="" method="post">
+                        <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                    </form>
+                </div>
+
+                <div class="box">
+                    <div class="price">$<span>2</span>/-</div>
+                    <img src="images/pizza-3.jpg" alt="">
+                    <div class="name">pizza 3</div>
+                    <form action="" method="post">
+                        <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+                        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+                    </form>
+                </div>
+            </div>
+        </section>        
+        <!-- menu section ends -->
+
+        <!-- order section starts  -->
+        <section class="order" id="order">
+            <h1 class="heading">ORDER NOW</h1>
+            <form action="" method="post">
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Your Name :</span>
+                        <input type="text" name="name" class="box" required placeholder="enter your name" maxlength="20">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Your Number :</span>
+                        <input type="number" name="number" class="box" required placeholder="enter your number" min="0">
+                    </div>
+
+                    <div class="inputBox">
+                        <span>Payment Method</span>
+                        <select name="method" class="box">
+                            <option value="cash on delivery">Cash On Delivery</option>
+                            <option value="credit card">Credit Card</option>
+                            <option value="paytm">Paytm</option>
+                            <option value="paypal">Paypal</option>
+                        </select>
+                    </div>
+         
+                    <div class="inputBox">
+                        <span>Address Line 01 :</span>
+                        <input type="text" name="flat" class="box" required placeholder="e.g. flat no." maxlength="50">
+                    </div>
+        
+                    <div class="inputBox">
+                        <span>Address Line 02 :</span>
+                        <input type="text" name="street" class="box" required placeholder="e.g. street name." maxlength="50">
+                    </div>
+         
+                    <div class="inputBox">
+                        <span>Zipcode :</span>
+                        <input type="number" name="pin_code" class="box" required placeholder="e.g. 123456" min="0">
+                    </div>
+                </div>
+                <input type="submit" value="order now" class="btn" name="order">
+            </form>
+        </section>
+        <!-- order section ends -->
+
+        <!-- footer section starts  -->
+        <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone Number</h3>
+                    <p>+123-456-7890</p>
+                    <p>+111-222-3333</p>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Address</h3>
+                    <p>PizzaJoy Express Headquarters</p>
+                    <p>United Toppings of Flavor</p>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-clock"></i>
+                    <h3>Opening Hours</h3>
+                    <p>09:00am to 10:00pm</p>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Address</h3>
+                    <p>info@pizzajoyexpress.com</p>
+                </div>
+            </div>
+
+            <div class="credit">
+                &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
+            </div>
+        </section>
+        <!-- footer section ends -->
+    </body>
+</html>
